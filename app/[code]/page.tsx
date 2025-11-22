@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/db'
 
 interface PageProps {
@@ -12,14 +13,8 @@ export default async function RedirectPage({ params }: PageProps) {
   })
 
   if (!link) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Link Not Found</h1>
-          <p className="text-gray-600">The short link you're looking for doesn't exist.</p>
-        </div>
-      </div>
-    )
+    // Return proper 404 status code instead of custom page
+    notFound()
   }
 
   // Update click count
