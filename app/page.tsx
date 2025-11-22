@@ -14,29 +14,36 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="space-y-4 mb-8">
+        {/* FIXED: Feature highlights as non-clickable cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <p className="text-base md:text-lg">Create short links instantly</p>
+            <div className="text-2xl mb-2">⚡</div>
+            <h3 className="font-semibold mb-2">Instant Links</h3>
+            <p className="text-sm text-blue-100">Create short links in seconds</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <p className="text-base md:text-lg">Track clicks and analytics</p>
+            <div className="text-2xl mb-2">📊</div>
+            <h3 className="font-semibold mb-2">Track Analytics</h3>
+            <p className="text-sm text-blue-100">Monitor clicks and performance</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <p className="text-base md:text-lg">Custom short codes available</p>
+            <div className="text-2xl mb-2">🎯</div>
+            <h3 className="font-semibold mb-2">Custom Codes</h3>
+            <p className="text-sm text-blue-100">Use your own short codes</p>
           </div>
         </div>
 
-        {/* FIXED: Better mobile button layout */}
+        {/* Action Buttons - Clear call-to-action */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
             href="/dashboard" 
-            className="bg-white text-blue-600 px-6 py-4 rounded-lg hover:bg-gray-100 font-semibold text-base md:text-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
+            className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
           >
             Go to Dashboard
           </Link>
           <Link 
             href="/api/healthz"
-            className="bg-transparent border-2 border-white text-white px-6 py-4 rounded-lg hover:bg-white/10 font-semibold text-base md:text-lg transition-all duration-200 text-center"
+            className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 font-semibold text-lg transition-all duration-200 text-center"
           >
             Check API Health
           </Link>
