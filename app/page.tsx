@@ -14,22 +14,30 @@ export default function Home() {
           </p>
         </div>
         
-        {/* FIXED: Feature highlights as non-clickable cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl mb-2">⚡</div>
-            <h3 className="font-semibold mb-2">Instant Links</h3>
-            <p className="text-sm text-blue-100">Create short links in seconds</p>
+        {/* FIXED: Simple feature highlights (not cards) */}
+        <div className="space-y-4 mb-8 text-left max-w-md mx-auto">
+          <div className="flex items-start space-x-3">
+            <span className="text-2xl mt-1">⚡</span>
+            <div>
+              <h3 className="font-semibold text-white">Instant Links</h3>
+              <p className="text-blue-100 text-sm">Create short links in seconds</p>
+            </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl mb-2">📊</div>
-            <h3 className="font-semibold mb-2">Track Analytics</h3>
-            <p className="text-sm text-blue-100">Monitor clicks and performance</p>
+          
+          <div className="flex items-start space-x-3">
+            <span className="text-2xl mt-1">📊</span>
+            <div>
+              <h3 className="font-semibold text-white">Track Analytics</h3>
+              <p className="text-blue-100 text-sm">Monitor clicks and performance</p>
+            </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl mb-2">🎯</div>
-            <h3 className="font-semibold mb-2">Custom Codes</h3>
-            <p className="text-sm text-blue-100">Use your own short codes</p>
+          
+          <div className="flex items-start space-x-3">
+            <span className="text-2xl mt-1">🔧</span>
+            <div>
+              <h3 className="font-semibold text-white">Custom Codes</h3>
+              <p className="text-blue-100 text-sm">Use your own short codes</p>
+            </div>
           </div>
         </div>
 
