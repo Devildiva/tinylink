@@ -32,9 +32,19 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if code exists
-    const existing = await prisma.link.findUnique({ where: { code } })
-    if (existing) {
-      return NextResponse.json({ error: 'Code already exists' }, { status: 409 })
+    if (code) {
+      const existingCode = await prisma.link.findUnique({ where: { code } })
+      if (existingCode) {
+        return NextResponse.json({ error: 'Code already exists' }, { status: 409 })
+      }
+    }
+
+    // Check if URL already exists
+    const existingUrl = await prisma.link.findFirst({ 
+      where: { targetUrl } 
+    })
+    if (existingUrl) {
+      return NextResponse.json({ error: 'URL already exists' }, { status: 409 })
     }
 
     const link = await prisma.link.create({
