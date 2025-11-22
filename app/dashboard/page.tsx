@@ -116,7 +116,8 @@ export default function Dashboard() {
 
         <div className="bg-white rounded-lg shadow p-6 mb-6">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-semibold">Your Links</h2>
+            {/* FIXED: Changed text color from gray-600 to gray-800 for better visibility */}
+            <h2 className="text-xl font-semibold text-gray-800">Your Links</h2>
             <button
               onClick={() => setShowForm(!showForm)}
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
